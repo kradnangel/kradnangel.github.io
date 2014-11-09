@@ -16,14 +16,14 @@ defaults:
 
 description: Stylish Jekyll Theme
 author:
-  name: dbyll
-  email: dbyll@ismaildemirbilek.com
-  github: dbtek
-  twitter: dbtek
-  pinterest: asd123
-  linkedin: asd123
-  bio: Your stylish, minimalist theme!
-  email_md5: 726351295ec82e145928582f595aa3aa
+  name: Zhou Qianren
+  email: zhouqianren.dark@gmail.com
+  github: kradnangel
+  twitter: Mold_Ex
+  pinterest: 
+  linkedin: https://www.linkedin.com/in/qianrenzhou
+  bio: Writing 100 words a day make me better.
+  email_md5: a984847d8e1d9700412ba892e2b4ac43
 
 rss_path: feed.xml
 categories_path: categories.html
