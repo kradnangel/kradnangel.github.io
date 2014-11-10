@@ -12,16 +12,16 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Dream my dream
 
 description: Stylish Jekyll Theme
 author:
   name: Zhou Qianren
   email: zhouqianren.dark@gmail.com
   github: kradnangel
-  twitter: Mole_Ex
-  pinterest: 
-  linkedin: cn.linkedin.com/in/qianrenzhou/
+  instagram: kradnangel
+  facebook: zhouqianren.dark
+  linkedin: qianrenzhou
   bio: Writing 100 words a day make me better.
   email_md5: a984847d8e1d9700412ba892e2b4ac43
 
