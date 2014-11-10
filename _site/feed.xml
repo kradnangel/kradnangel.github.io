@@ -33,9 +33,14 @@ It seems that it’s not difficult to see the doctor by myself. Of course, I nee
 &lt;p&gt;Generally speaking, the Mac OS will have installed Ruby by default.
 To check, open Terminal and run command ‘ruby –version’&lt;/p&gt;
 
+&lt;p&gt;&lt;br /&gt;	&lt;/p&gt;
+
 &lt;h4 id=&quot;install-bundler&quot;&gt;Install Bundler&lt;/h4&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;$ gem install bundler&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;$ gem install bundler
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;	&lt;/p&gt;
 
 &lt;h4 id=&quot;install-jekyll&quot;&gt;Install Jekyll&lt;/h4&gt;
 &lt;p&gt;Create a file in repository called &lt;strong&gt;‘Gemfile’&lt;/strong&gt; and add &lt;em&gt;gem ‘github-pages’&lt;/em&gt;.&lt;/p&gt;
@@ -43,20 +48,47 @@ To check, open Terminal and run command ‘ruby –version’&lt;/p&gt;
 &lt;p&gt;Before run the next line, check whether you have installed &lt;strong&gt;‘xcode-select’&lt;/strong&gt; or not.
 If not, please install The command line tool for Xcode first by run &lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;$ xcode-select --install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;$ xcode-select --install
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Run &lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;l-Scalar-Plain&quot;&gt;$ bundle install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;	&lt;/p&gt;
 
 &lt;h4 id=&quot;run-jekyll&quot;&gt;Run Jekyll&lt;/h4&gt;
 &lt;p&gt;Run ‘bundle exec jekyll serve’ in Terminal
 Now, you can try to open http://localhost:4000/index.html to see your Github page.&lt;/p&gt;
 
-&lt;h3 id=&quot;ref&quot;&gt;Ref:&lt;/h3&gt;
-&lt;p&gt;http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;	&lt;/p&gt;
 
-&lt;p&gt;https://help.github.com/articles/using-jekyll-with-pages/&lt;/p&gt;
+&lt;h4 id=&quot;choose-theme&quot;&gt;Choose Theme&lt;/h4&gt;
+&lt;p&gt;See here:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Theme&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Fork the theme you like, unzip it and copy them to your repository folder.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;	&lt;/p&gt;
+
+&lt;h4 id=&quot;ref&quot;&gt;Ref:&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html&quot;&gt;一步步在GitHub上创建博客主页&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;Using Jekyll with Pages&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://beiyuu.com/github-pages/&quot;&gt;用Github Pages建独立博客&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/&quot;&gt;如何搭建一个独立博客——简明Github Pages与Hexo教程&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
 </description>
 				<pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
 				<link>/git/artical/2014/11/08/how%20to%20make%20Github%20Pages.html</link>
