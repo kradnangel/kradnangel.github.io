@@ -30,3 +30,14 @@ means you havn't started the MySQL Server. Do step 3.
 	ERROR 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
 
 means the password you entered is wrong. See step 5.
+
+</br>
+
+Next time, you can add the mysql to the PATH:
+	
+	PATH="$PATH":/usr/local/mysql/bin
+	
+Then open MySQL by:
+
+	mysql -u root -p
+	
