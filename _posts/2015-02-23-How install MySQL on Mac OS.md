@@ -31,7 +31,7 @@ means you havn't started the MySQL Server. Do step 3.
 
 means the password you entered is wrong. See step 5.
 
-</br>
+  <br />	
 
 Next time, you can add the mysql to the PATH:
 	
