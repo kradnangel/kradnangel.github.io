@@ -1,34 +1,56 @@
-dbyll
-=====
+Freshman21
+==========
 
-Open source stylish, minimalistic theme for jekyll.  
-Demo: http://dbtek.github.io/dbyll/
+Freshman21 is a Jekyll blog theme, base on theme [Freshman](http://github.com/yulijia/freshman). 
 
-## New
-Dbyll for Ghost is now available. Get it [here](https://github.com/dbtek/dbyll-ghost) now.
+A tribute to WordPress Theme Twenty-Twelve and Twenty-eleven.
 
-### Features
-- Responsive layout.
-- Supports tags and categories.
-- Social profile and bio of author.
-- Bootstrap based.
-- Glyphicon and Font-Awesome Icons.
-- Pagination.
-- Syntax highlighting with pygments.
-- Disqus comments.
+Enjoy.
 
 
-### Download
-* [Download dbyll](https://github.com/dbtek/dbyll/archive/master.zip)
+![Screen](http://i.imgur.com/oSp7kacl.png)
 
-### Screenshots
+### Version
 
-![dbyll-screenshot](	assets/media/dbyll-ss.png)
+- master branch: the simplest template, original version.
 
-### License
-- [MIT](http://opensource.org/licenses/MIT)
+- gh-pages branch: master branch with google analytics js template.
+
+- readmore branch: master branch with article summary.
+
+gh-pages and readmore branch will be merged.
+
+### update news
+
+```
+* Table of content
+{toc:}
+```
+add table of content css style.
 
 
+### How to install this theme?
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/dbtek/dbyll/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+```
+# please make sure you have already installed git tools and ruby tools(gem)
+$ gem install sass
+$ gem install jekyll
+$ git clone https://github.com/yulijia/freshman21.git
+$ mv freshman21/ yourblogname.github.io/
+```
+
+### A Summary of Features
+
+- Provide single column and two columns layout
+- Powerful configure file
+- Comments by Disqus
+- Support LaTeX (by MathJax)
+- Syntax highlighting
+
+
+### Demo
+
+Single column, please see [my own blog](http://yulijia.net/en/)
+
+Two columns, please see the [theme website](http://yulijia.net/freshman21/)
 

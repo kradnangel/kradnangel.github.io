@@ -35,9 +35,9 @@ means the password you entered is wrong. See step 5.
 
 Next time, you can add the mysql to the PATH:
 	
-	PATH="$PATH":/usr/local/mysql/bin
+	$ PATH="$PATH":/usr/local/mysql/bin
 	
 Then open MySQL by:
 
-	mysql -u root -p
+	$ mysql -u root -p
 	
