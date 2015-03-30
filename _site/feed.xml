@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Freshman21</title>
+    <title>Dream my dream</title>
     <description>Freshman21 is a Jekyll blog theme.</description>
     <link>http://yulijia.net/freshman21/</link>
     <atom:link href="http://yulijia.net/freshman21/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Mar 2015 14:03:47 +0100</pubDate>
-    <lastBuildDate>Mon, 30 Mar 2015 14:03:47 +0100</lastBuildDate>
+    <pubDate>Mon, 30 Mar 2015 14:09:08 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Mar 2015 14:09:08 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
