@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1">
+
+<meta property="og:title" content="How to read audio file by F#">
+<title>How to read audio file by F#</title>
+<meta property="og:description" content="Here, I will show how to read WAV file by F#.">
+<meta property="og:url" content="http://yulijia.net/freshman21/fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html">
+<meta property="og:site_name" content="Freshman21">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@yulijia">
+<meta name="twitter:creator" content="@yulijia">
+<meta name="twitter:title" content="How to read audio file by F#">
+<meta name="twitter:description" content="Here, I will show how to read WAV file by F#.">
+<meta name="twitter:url" content="http://yulijia.net/freshman21/fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html">
+
+<meta name="keywords" content="Jekyll, theme, Freshman21">
+
+<link rel="icon" href="/freshman21/images/favicon.ico">
+<link rel="stylesheet" href="/freshman21/css/main.css">
+<link rel="canonical" href="http://yulijia.net/freshman21/fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html">
+<link rel="alternate" type="application/atom+xml" title="Freshman21" href="http://yulijia.net/freshman21/feed.xml" />
+
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+</head>
+
+
+
+
+<body>
+
+<div class="container">
+
+  <header class="site-header">
+
+  <div class="wrapper">
+
+    <h1 class="site-title"><a href="/freshman21/">Freshman21</a></h1>
+    <h3 class="site-meta">Another Jekyll theme, Freshman twenty-first</h3>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+        
+        <a class="page-link" href="/freshman21/">Home</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/about/">About</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/archives/">Archives</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/categories/">Categories</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/tags/">Tags</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/guestbook/">Guestbook</a>
+        
+        
+        
+        <a class="page-link" href="/freshman21/feed.xml">Subscribe</a>
+        
+        
+        
+        
+        
+        
+        
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    
+
+  <div class="page-content col-sm-8">
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title">How to read audio file by F#</h1>
+    <meta itemprop="keywords" content="audio,Fsharp" />
+    <p class="post-meta">
+    Posted in
+    
+    <a href="/freshman21/categories/#fsharp">fsharp</a>&nbsp;
+     
+    
+    and tagged
+    
+    <a href="/freshman21/tags/#audio" title="audio">audio </a>, 
+    
+    <a href="/freshman21/tags/#Fsharp" title="Fsharp">Fsharp </a>
+    
+    
+    <time itemprop="datePublished" datetime="2015-02-05">
+    on Feb 5, 2015
+    </time>
+    </p>
+  </header>
+
+  <article class="post-content" itemprop="articleBody">
+    <p>Here, I will show how to read WAV file by F#.</p>
+
+<p>First of all, we need to know the file header of WAV.</p>
+
+<p>Every WAV file will have a file header. The general form is like this:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>偏移地址</th>
+      <th>十进制</th>
+      <th>字节数</th>
+      <th>类型</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00H~03H</td>
+      <td>0-3</td>
+      <td>4</td>
+      <td>字符</td>
+      <td>资源交换文件标志（RIFF）</td>
+    </tr>
+    <tr>
+      <td>04H~07H</td>
+      <td>4-7</td>
+      <td>4</td>
+      <td>长整数</td>
+      <td>从下个地址开始到文件尾的总字节数</td>
+    </tr>
+    <tr>
+      <td>08H~0BH</td>
+      <td>8-11</td>
+      <td>4</td>
+      <td>字符</td>
+      <td>WAV文件标志（WAVE）</td>
+    </tr>
+    <tr>
+      <td>0CH~0FH</td>
+      <td>12-15</td>
+      <td>4</td>
+      <td>字符</td>
+      <td>波形格式标志（FMT）</td>
+    </tr>
+    <tr>
+      <td>10H~13H</td>
+      <td>16-19</td>
+      <td>4</td>
+      <td>整数</td>
+      <td>过滤字节（一般为00000010H）</td>
+    </tr>
+    <tr>
+      <td>14H~15H</td>
+      <td>20-21</td>
+      <td>2</td>
+      <td>整数</td>
+      <td>格式种类（值为1，表示数据PCMμ律编码的数据）</td>
+    </tr>
+    <tr>
+      <td>16H~17H</td>
+      <td>22-23</td>
+      <td>2</td>
+      <td>整数</td>
+      <td>通道数，单声道为1，双声道为2</td>
+    </tr>
+    <tr>
+      <td>18H~1BH</td>
+      <td>24-27</td>
+      <td>4</td>
+      <td>长整数</td>
+      <td>采样频率</td>
+    </tr>
+    <tr>
+      <td>1CH~1FH</td>
+      <td>28-31</td>
+      <td>4</td>
+      <td>长整数</td>
+      <td>波形数据传输速率（每秒平均字节数）</td>
+    </tr>
+    <tr>
+      <td>20H~21H</td>
+      <td>32-33</td>
+      <td>2</td>
+      <td>整数</td>
+      <td>数据的调整数（按字节计算）</td>
+    </tr>
+    <tr>
+      <td>22H~23H</td>
+      <td>34-35</td>
+      <td>2</td>
+      <td>整数</td>
+      <td>样本数据位数</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>16H~17H处记录通道数，当值为1时，表示文件为单声道；当值为2时，表示文件为双声道。</p>
+
+<p>18H~1BH处记录采样频率。它的取值与声卡的支持情况有关。常见的有8000、11025、22050、44100、48000、96000等。其中，44100是大多数歌曲文件采用的标准采样频率。</p>
+
+<p>22H~23H处记录样本数据位数。即每一个采样的长度。常见的有8位和16位。这里还包含了另外一个信息：若样本的数据位数为n，对于双声道文件，则低n/2位用于存放左声道；高n/2位用于存放右声道。</p>
+
+<p>The real data begins at 44.</p>
+
+
+  </article>
+  <hr />
+</div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="previous"><a href="/freshman21/mac/2015/02/02/Mac%20usage.html" title="Mac Usage">&larr; Older</a></li>
+    
+    
+    <li class="next"><a href="/freshman21/mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html" title="How install MySQL on Mac OS X">Newer &rarr;</a></li>
+    
+  </ul>
+</section>
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+
+var disqus_shortname ='freshman21';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+    <section class="pager">
+  
+  
+</section>
+
+
+  </div>
+  <div class="col-sm-2">
+<div class="sidebar-module about">
+  <h4>About Me</h4>
+  <img title="Lijia Yu" src="https://i.imgur.com/Mdc4szJl.jpg" alt="Lijia Yu"/>
+  <span>Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it.</span>
+  <br />
+
+  
+
+  You can contact me via:
+
+  
+  <a href="mailto:yu@lijiayu.net" title="mailto: yu@lijiayu.net">Email</a> /
+  
+  
+  <a href="https://github.com/yulijia" title="GithubID: yulijia">Github</a> /
+  
+  
+  <a href="https://twitter.com/yulijia" title="TwitterID: yulijia">Twitter</a>
+  
+
+  
+
+</div>
+
+<div class="sidebar-module"> <!-- sidebar-module-inset">-->
+  <h4>Copyright Notice</h4>
+
+  
+
+  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
+    <img src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png">
+  </a>
+  <br />
+  <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Attribution-NonCommercial-ShareAlike</a>
+
+  
+
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Recent Posts</h4>
+  
+  <li>
+  <a href="/freshman21//mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html" title="How install MySQL on Mac OS X" rel="bookmark">How install MySQL on Mac OS X</a>
+  </li>
+  
+  <li>
+  <a href="/freshman21//fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html" title="How to read audio file by F#" rel="bookmark">How to read audio file by F#</a>
+  </li>
+  
+  <li>
+  <a href="/freshman21//mac/2015/02/02/Mac%20usage.html" title="Mac Usage" rel="bookmark">Mac Usage</a>
+  </li>
+  
+  <li>
+  <a href="/freshman21//diary/2014/11/10/Diary.html" title="Diary" rel="bookmark">Diary</a>
+  </li>
+  
+  <li>
+  <a href="/freshman21//test/artical/2014/11/09/hello-world.html" title="Hello World!" rel="bookmark">Hello World!</a>
+  </li>
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Categories</h4>
+  
+  <li><a href="/freshman21/categories/#git" title="git" rel="1">git (1)</a></li>
+  
+  <li><a href="/freshman21/categories/#artical" title="artical" rel="2">artical (2)</a></li>
+  
+  <li><a href="/freshman21/categories/#test" title="test" rel="1">test (1)</a></li>
+  
+  <li><a href="/freshman21/categories/#diary" title="diary" rel="1">diary (1)</a></li>
+  
+  <li><a href="/freshman21/categories/#mac" title="mac" rel="1">mac (1)</a></li>
+  
+  <li><a href="/freshman21/categories/#fsharp" title="fsharp" rel="1">fsharp (1)</a></li>
+  
+  <li><a href="/freshman21/categories/#mysql" title="mysql" rel="1">mysql (1)</a></li>
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Tags</h4>
+  
+    <a href="/freshman21/tags/#github" title="github" rel="1">github</a> &nbsp;
+  
+    <a href="/freshman21/tags/#pages" title="pages" rel="1">pages</a> &nbsp;
+  
+    <a href="/freshman21/tags/#how" title="how" rel="1">how</a> &nbsp;
+  
+    <a href="/freshman21/tags/#hello" title="hello" rel="1">hello</a> &nbsp;
+  
+    <a href="/freshman21/tags/#world" title="world" rel="1">world</a> &nbsp;
+  
+    <a href="/freshman21/tags/#Diary" title="Diary" rel="1">Diary</a> &nbsp;
+  
+    <a href="/freshman21/tags/#Mac" title="Mac" rel="1">Mac</a> &nbsp;
+  
+    <a href="/freshman21/tags/#Usage" title="Usage" rel="1">Usage</a> &nbsp;
+  
+    <a href="/freshman21/tags/#audio" title="audio" rel="1">audio</a> &nbsp;
+  
+    <a href="/freshman21/tags/#Fsharp" title="Fsharp" rel="1">Fsharp</a> &nbsp;
+  
+    <a href="/freshman21/tags/#MySQL" title="MySQL" rel="1">MySQL</a> &nbsp;
+  
+    <a href="/freshman21/tags/#Mac OS X" title="Mac OS X" rel="1">Mac OS X</a> &nbsp;
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Blogroll</h4>
+  
+  <li><a href="http://yulijia.net/freshman21" title="Another Jekyll blog theme">Freshman21</a></li>
+  
+  <li><a href="http://yulijia.net/" title="Lijia Yu's website">author's website</a></li>
+  
+</div>
+
+
+<div class="sidebar-module">
+  <h4>Archives</h4>
+
+  
+  
+  
+  
+  
+  <li id="2015" > <a href="/freshman21/archives/#2015">2015</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li id="2014" > <a href="/freshman21/archives/#2014">2014</a></li>
+  
+  
+  
+  
+  
+  
+  
+  
+
+</div>
+
+
+</div>
+
+
+
+  
+
+  <footer class="site-footer">
+
+  <p>Copyright &copy; <a href="/freshman21/">Freshman21</a></p>
+  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
+  on 
+  
+  <a href="https://github.com/">Github</a>
+  
+  | Theme <a href="https://github.com/yulijia/freshman21/">Freshman21</a> Design by <a href="http://yulijia.net">Lijia Yu</a>  
+
+</footer>
+
+
+</div>
+
+</body>
+
+</html>
