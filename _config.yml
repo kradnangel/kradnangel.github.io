@@ -3,16 +3,16 @@ title: Dream my dream
 tagline: This is a blog of a programmer
 author: ZHOU Qianren
 email: zhouqianren.dark@gmail.com
-description: "Freshman21 is a Jekyll blog theme." # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
-keywords: "Jekyll, theme, Freshman21"
+description: "This is my blog" # You can edit this line in _config.yml. It will appear in your document head meta and in your feed.xml site description
+keywords: "blog, kradnangel, programmer"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yulijia.net/freshman21" # the base hostname & protocol for your site
+url: "http://kradnangel.github.io/" # the base hostname & protocol for your site
 locale: en_US
 
 ### Personal info and site tools info:
 twitter_username: Mole_Ex
 github_username:  kradnangel
-disqus_shortname: freshman
+disqus_shortname: # disqus id?
 favicon:     "/images/website_logo_z.jpg"
 aboutme: Hi, this is Zhou Qianren. Welcome to my blog. I hope you will enjoy it. # these are shown on aboutme-sidebar.
 aboutme_photo: https://avatars0.githubusercontent.com/u/6039930?v=3&s=460 # your photo.
@@ -55,12 +55,10 @@ locales:
 ### your Blogroll info, only name can shown on the page.
 
 Blogroll:
-    - name: Freshman21
-      href: http://yulijia.net/freshman21
-      title: Another Jekyll blog theme
-    - name: author's website
-      href: http://yulijia.net/
-      title: Lijia Yu's website
+    - name: Dream my dream
+      href: http://kradnangel.github.io/
+      title: Zhou Qianren's blog
+
 
 
 ### Build settings

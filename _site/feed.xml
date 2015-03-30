@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dream my dream</title>
-    <description>Freshman21 is a Jekyll blog theme.</description>
-    <link>http://yulijia.net/freshman21/</link>
-    <atom:link href="http://yulijia.net/freshman21/zfeed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Mar 2015 14:09:08 +0100</pubDate>
-    <lastBuildDate>Mon, 30 Mar 2015 14:09:08 +0100</lastBuildDate>
+    <description>This is my blog</description>
+    <link>http://kradnangel.github.io//</link>
+    <atom:link href="http://kradnangel.github.io//zfeed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 30 Mar 2015 14:53:18 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Mar 2015 14:53:18 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -53,8 +53,8 @@
 
 </description>
         <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html</guid>
+        <link>http://kradnangel.github.io//mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//mysql/2015/02/23/How%20install%20MySQL%20on%20Mac%20OS.html</guid>
         
         <category>MySQL</category>
         
@@ -174,8 +174,8 @@
 
 </description>
         <pubDate>Thu, 05 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html</guid>
+        <link>http://kradnangel.github.io//fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//fsharp/2015/02/05/How%20to%20read%20audio%20file%20by%20Fsharp.html</guid>
         
         <category>audio</category>
         
@@ -198,8 +198,8 @@
 
 </description>
         <pubDate>Mon, 02 Feb 2015 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/mac/2015/02/02/Mac%20usage.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/mac/2015/02/02/Mac%20usage.html</guid>
+        <link>http://kradnangel.github.io//mac/2015/02/02/Mac%20usage.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//mac/2015/02/02/Mac%20usage.html</guid>
         
         <category>Mac</category>
         
@@ -235,8 +235,8 @@ It seems that it’s not difficult to see the doctor by myself. Of course, I nee
 
 </description>
         <pubDate>Mon, 10 Nov 2014 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/diary/2014/11/10/Diary.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/diary/2014/11/10/Diary.html</guid>
+        <link>http://kradnangel.github.io//diary/2014/11/10/Diary.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//diary/2014/11/10/Diary.html</guid>
         
         <category>Diary</category>
         
@@ -250,8 +250,8 @@ It seems that it’s not difficult to see the doctor by myself. Of course, I nee
         <description>&lt;p&gt;&lt;strong&gt;This&lt;/strong&gt; is my Blog. Welcome!&lt;/p&gt;
 </description>
         <pubDate>Sun, 09 Nov 2014 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/test/artical/2014/11/09/hello-world.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/test/artical/2014/11/09/hello-world.html</guid>
+        <link>http://kradnangel.github.io//test/artical/2014/11/09/hello-world.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//test/artical/2014/11/09/hello-world.html</guid>
         
         <category>hello</category>
         
@@ -328,8 +328,8 @@ Now, you can try to open http://localhost:4000/index.html to see your Github pag
 
 </description>
         <pubDate>Sat, 08 Nov 2014 00:00:00 +0000</pubDate>
-        <link>http://yulijia.net/freshman21/git/artical/2014/11/08/How%20to%20make%20Github%20Pages.html</link>
-        <guid isPermaLink="true">http://yulijia.net/freshman21/git/artical/2014/11/08/How%20to%20make%20Github%20Pages.html</guid>
+        <link>http://kradnangel.github.io//git/artical/2014/11/08/How%20to%20make%20Github%20Pages.html</link>
+        <guid isPermaLink="true">http://kradnangel.github.io//git/artical/2014/11/08/How%20to%20make%20Github%20Pages.html</guid>
         
         <category>github</category>
         
