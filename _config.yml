@@ -10,12 +10,12 @@ url: "http://yulijia.net/freshman21" # the base hostname & protocol for your sit
 locale: en_US
 
 ### Personal info and site tools info:
-twitter_username: yulijia
-github_username:  yulijia
-disqus_shortname: freshman21
-favicon:     "/images/favicon.ico"
-aboutme: Hi, this is Lijia Yu. I made the Freshman21 theme. Please enjoy it. # these are shown on aboutme-sidebar.
-aboutme_photo: https://i.imgur.com/Mdc4szJl.jpg # your photo.
+twitter_username: Mole_Ex
+github_username:  kradnangel
+disqus_shortname: freshman
+favicon:     "/images/website_logo_z.jpg"
+aboutme: Hi, this is Zhou Qianren. Welcome to my blog. I hope you will enjoy it. # these are shown on aboutme-sidebar.
+aboutme_photo: https://avatars0.githubusercontent.com/u/6039930?v=3&s=460 # your photo.
 
 
 ### Site setting:
