@@ -1,8 +1,8 @@
 ---
 layout: post
 title: LeetCode_Palindrome Number
-categories: [fsharp]
-tags: [fsharp, random, array]
+categories: [LeetCode]
+tags: [LeetCode, python]
 fullview: true
 ---
 ###Question
