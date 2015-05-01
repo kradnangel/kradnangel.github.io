@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Solution][LeetCode][Palindrome Number]
+title: LeetCode_Palindrome Number
 categories: [fsharp]
 tags: [fsharp, random, array]
 fullview: true
@@ -25,11 +25,11 @@ Then look at the second and penult.
 
 ...
 
-There are some details in this question.
+There are some details in this question:
 
-You should check every number instead of just subtracting the corresponding numbers which are checked from the integer and checking the remainder.
+You should check every number instead of just removing the corresponding numbers which are checked from the integer and checking the remainder.
 
-For example, when you're checking the first number and last number of 100021, if you just use 100021 - 100000 - 1, you will get 2. In this case, your program will return true, which makes the mistake.
+For example, when you're checking the first number and last number of 100021, if you just use 100021 - 100000 and divide 10, you will get 2. In this case, your program will return true, which makes the mistake.
 
 
 ###Code
