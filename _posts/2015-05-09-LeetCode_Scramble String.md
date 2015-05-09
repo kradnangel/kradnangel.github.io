@@ -40,7 +40,7 @@ Similarly, if we continue to swap the children of nodes "eat" and "at", it produ
 	 / \    /  \
 	r   g  ta  e
     	   / \
-	      t   a	          
+		  t   a	          
 	          
 We say that "rgtae" is a scrambled string of "great".
 

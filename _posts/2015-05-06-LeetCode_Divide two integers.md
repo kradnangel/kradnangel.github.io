@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Divide two integers
+title: LeetCode_Divide two integers
 categories: [LeetCode]
-tags: [LeetCode, python]
+tags: [LeetCode, python, Numerical]
 fullview: true
 ---
 ###Question
