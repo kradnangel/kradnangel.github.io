@@ -6,7 +6,7 @@ tags: [Fsharp, Correlation Coefficient]
 fullview: true
 ---
 ###Formula
-![](../images/CorrelationCoefficient.GIF)
+![](/images/CorrelationCoefficient.GIF)
 
 
 ###Code
