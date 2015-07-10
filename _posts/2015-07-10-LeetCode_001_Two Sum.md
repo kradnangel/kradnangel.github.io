@@ -22,12 +22,14 @@ First, we use the target to minus every element in the *nums* to get a new list.
 There are three cases:
 
 1. only one number: there must be two same numbers that are added up to target.
-2. two numbers: just find the index of these two numbers.
+2. two numbers: just find the indexes of these two numbers.
 3. three nummbers: there must be one numbers which equals to half of the target. And because there is only one solution for the target. So, this number must be only one in the list instead of two. In which case, this number is not part of solution. So, we need to remove it from the solution list.
 
 Last, just return the indexes in order.
+	
+  <br />
 
-
+Other solution: use the Hash Table.
 
 ###Code
 	class Solution:
