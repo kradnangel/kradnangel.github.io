@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_062_Unique Paths
 categories: [LeetCode]
-tags: [LeetCode, python, list]
+tags: [LeetCode, python, grid]
 fullview: true
 ---
 ###Question
