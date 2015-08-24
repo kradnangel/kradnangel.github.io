@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_072_Edit Distance
 categories: [LeetCode]
-tags: [LeetCode, python, numbers]
+tags: [LeetCode, python, string]
 fullview: true
 ---
 ###Question

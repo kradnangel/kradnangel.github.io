@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_073_Set Matrix Zeroes 
 categories: [LeetCode]
-tags: [LeetCode, python, numbers]
+tags: [LeetCode, python, matrix]
 fullview: true
 ---
 ###Question
