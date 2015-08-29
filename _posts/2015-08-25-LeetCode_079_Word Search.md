@@ -56,14 +56,11 @@ The 'x', 'y' here represent the current position.
 				y = startP[1]
 				f[x][y] = False
 				while i in range(1, end):
-					j = p[-1] + 1
-					while (j < 4) and ((x+d[j][0] not in range(n)) or (y+d[j][1] not in range(m))):
-						j += 1
-					while (j < 4) and (not f[x+d[j][0]][y+d[j][1]] or (board[x+d[j][0]][y+d[j][1]] != word[i])):
-						j += 1
-						while (j < 4) and ((x+d[j][0] not in range(n)) or (y+d[j][1] not in range(m))):
-							j += 1
-					if j >= 4:
+					for j in range(p[-1] + 1, 4+1):
+						if (j < 4) and (x+d[j][0] in range(n)) and (y+d[j][1] in range(m)):
+							if f[x+d[j][0]][y+d[j][1]] and (board[x+d[j][0]][y+d[j][1]] == word[i]):
+								break
+					if j == 4:
 						i -= 1
 						p.pop()
 						f[x][y] = True

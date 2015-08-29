@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_084_Largest Rectangle in Histogram 
 categories: [LeetCode]
-tags: [LeetCode, python, sort]
+tags: [LeetCode, python, list]
 fullview: true
 ---
 ###Question
@@ -32,6 +32,8 @@ In this process, we will use "leftMin" and "rightMin" to record the position of 
 Take left as the example, when we try to find the left smaller height of current height, we first compare current height with the height of left one of current height. If the left one is smaller, just record the position of left one in "leftMin". If the left one is not smaller, we get the the position of the left first smaller height of left one from "leftMin" and compare it with the current height. We won't stop until we find a height is smaller than current height.
 
 Since there is no height in the left of the first height, we insert "0" in the position "0". Similarly, we add "0" to the end of the height list.
+
+A better [algorithm](http://www.2cto.com/kf/201502/375392.html) using stack (in Chinese).
 
 ###Code
 	class Solution(object):
