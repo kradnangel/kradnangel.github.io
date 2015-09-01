@@ -12,7 +12,7 @@ locale: en_US
 ### Personal info and site tools info:
 twitter_username: Mole_Ex
 github_username:  kradnangel
-disqus_shortname: # disqus id?
+disqus_shortname: qianrenzhou
 favicon:     "/images/website_logo_z.jpg"
 aboutme: Hi, this is Zhou Qianren. Welcome to my blog. I hope you will enjoy it. # these are shown on aboutme-sidebar.
 aboutme_photo: https://avatars0.githubusercontent.com/u/6039930?v=3&s=460 # your photo.
