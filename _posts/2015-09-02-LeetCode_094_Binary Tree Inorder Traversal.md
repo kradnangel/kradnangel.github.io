@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_094_Binary Tree Inorder Traversal
 categories: [LeetCode]
-tags: [LeetCode, python, tree]
+tags: [LeetCode, python, tree, stack]
 fullview: true
 ---
 ###Question
