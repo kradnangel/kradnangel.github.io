@@ -1,8 +1,8 @@
 ---
 layout: post
-title: LeetCode_Valid Parentheses
+title: LeetCode_020_Valid Parentheses
 categories: [LeetCode]
-tags: [LeetCode, python]
+tags: [LeetCode, python, stack]
 fullview: true
 ---
 ###Question

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_Divide two integers
+title: LeetCode_029_Divide two integers
 categories: [LeetCode]
 tags: [LeetCode, python, Numerical]
 fullview: true

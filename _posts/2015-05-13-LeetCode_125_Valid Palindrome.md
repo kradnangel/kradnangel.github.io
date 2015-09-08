@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_Valid Palindrome
+title: LeetCode_125_Valid Palindrome
 categories: [LeetCode]
 tags: [LeetCode, python, String]
 fullview: true

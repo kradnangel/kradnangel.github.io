@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_096_Interleaving String
+title: LeetCode_097_Interleaving String
 categories: [LeetCode]
 tags: [LeetCode, python, string, DP]
 fullview: true

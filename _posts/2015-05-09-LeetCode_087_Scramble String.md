@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_Scramble String
+title: LeetCode_087_Scramble String
 categories: [LeetCode]
 tags: [LeetCode, python, DP]
 fullview: true

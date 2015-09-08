@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_House Robber
+title: LeetCode_198_House Robber
 categories: [LeetCode]
 tags: [LeetCode, python, DP]
 fullview: true
