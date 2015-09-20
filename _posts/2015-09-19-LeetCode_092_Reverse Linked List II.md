@@ -24,7 +24,7 @@ the program of reverse linked list is used to reverse the specified part of link
 
 ![](/images/092.jpg)
 
-Expect this, we also need to connect this part to its front and its rear. That's what the green part does.
+Except this, we also need to connect this part to its front and its rear. That's what the green part does.
 
 We need to mark the last node 'f' of the front, the first node 'startUp' of the reverse part, the last node 'p' of the reverse part and the first node 'q' of the rear. Then try to connect: 'f.next = p' 'startUp.next = q'
 

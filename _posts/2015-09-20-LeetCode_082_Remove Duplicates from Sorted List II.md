@@ -49,5 +49,4 @@ At last, return the next node of 'beforeHead'.
                     front = p
                 p = q
 
-
             return beforeHead.next
