@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_097_Validate Binary Search Tree
+title: LeetCode_098_Validate Binary Search Tree
 categories: [LeetCode]
 tags: [LeetCode, python, tree, recursion]
 fullview: true
