@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_099_Recover Binary Search Tree
 categories: [LeetCode]
-tags: [LeetCode, python, tree, recursion]
+tags: [LeetCode, python, tree, traversal]
 fullview: true
 ---
 ###Question
