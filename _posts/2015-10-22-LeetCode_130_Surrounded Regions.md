@@ -38,7 +38,7 @@ This solution leads to system stack overflow.
 
 We do not need to check every 'O' one by one. What we should do is just doing search based on the 'O' which is in the border. So, they are bad 'O's and what we do is finding the 'O' is in the same region with these bad 'O' and marking it as bad 'O'.
 
-Then, at last, change every 'O' to 'X' and change every 'B' to '0'.
+Then, at last, change every 'O' to 'X' and change every 'B' to 'O'.
 
 ###Code
 	class Solution(object):
