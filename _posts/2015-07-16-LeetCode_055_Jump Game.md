@@ -41,9 +41,9 @@ At last, after scanning the whole list, judge that whether the next unreachable 
 			now = 0		#the current index
 			for x in nums:	#the jumps
 				if (now < noreach) & (x > 0):
-					while (now + x >= noreach) & (noreach < n):
-		   				noreach += 1
-		   				
-		   		now += 1
+					if (now + x >= noreach):
+	   					noreach = now + x + 1
+	   				
+	   			now += 1
 
-			return (noreach == n)
+			return (noreach >= n)

@@ -23,6 +23,8 @@ See the details below:
 
 ![](/images/069.jpg)
 
+Another solution is dichotomy.
+
 
 ###Code
 	class Solution:
