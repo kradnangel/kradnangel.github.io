@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LeetCode_312_Remove Duplicate Letters
+title: LeetCode_316_Remove Duplicate Letters
 categories: [LeetCode]
 tags: [LeetCode, python, string]
 fullview: true
