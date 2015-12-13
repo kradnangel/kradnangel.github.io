@@ -7,6 +7,7 @@ fullview: true
 ---
 
 ## Dynamic Programming
+
 ### Precondition
 The question should satisfy following three principles:
 
@@ -18,7 +19,9 @@ The question should satisfy following three principles:
 
 
 ### Classification
+
 #### 2D direct model
+
 ##### Model
 a[i][j] means the result of combining s1[:i-1] and s2[:j-1].
 
@@ -40,11 +43,17 @@ O(n^2)
 ##### Examples
 [Interleaving String](http://qianrenzhou.me/leetcode/2015/09/08/LeetCode_097_Interleaving%20String.html)
 
+[Regular Expression Matching](http://qianrenzhou.me/leetcode/2015/12/13/LeetCode_010_Regular%20Expression%20Matching.html)
 
+
+
+#### 2D sectional model / insertion model
 
 
 ###Searching
+
 ####Depth First Search
+
 #####Algorithm Framework
 
 	def dfs(x):
