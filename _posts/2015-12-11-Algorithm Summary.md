@@ -23,6 +23,8 @@ The question should satisfy following three principles:
 #### 2D direct model
 
 ##### Model
+Given two strings/lists.
+ 
 a[i][j] means the result of combining s1[:i-1] and s2[:j-1].
 
 a[n][m] is the final answer for original question.
@@ -31,6 +33,7 @@ a[n][m] is the final answer for original question.
 O(n^2)
 
 ##### Algorithm Framework
+
 	#initialization
 	n, m = len(s1), len(s2)
 	a = [[0/False for col in xrange(n)] for row in xrange(m)]
@@ -49,6 +52,36 @@ O(n^2)
 
 #### 2D sectional model / insertion model
 
+##### Model
+Given one string / list.
+
+a[i][j] means the best result of s[i:j]
+
+a[0][n-1] is the best answer of original question.
+
+Generally, enumerate the range, the left point and the midpoint. 
+
+##### Complexity
+O(n^3)
+
+##### Algorithm Framework
+
+	#initialization
+	n = len(s)
+	a = [[0 for col in xrange(n)] for row in xrange(n)]
+
+	for i in xrange(n):
+		'initial a[i][i]' #e.g. a[i][i] = s[i]	
+		
+	for 'range m' in xrange(n):
+		for 'left point i' in xrange(n-m+1):
+			j = i + m - 1
+				for 'midpoint k' in xrange(i+1,j):
+				# When enumerate the k, pay attention to the boundary conditions
+				a[i][j] = ... #e.g. max(a[i][k], a[k][j])
+				
+	return a[0][n-1]
+				
 
 ###Searching
 
