@@ -21,7 +21,7 @@ fullview: true
 * Representations: Adjacency list / Adjacency matrix
 
 ### Outline
-![](/images/Graph)
+![](/images/Graph.png)
 
 ### Directed graph
 * the edges have a direction
