@@ -8,6 +8,11 @@ fullview: true
 
 ## Tree
 
+### Rank
+Rank is the number of nodes in the Left sub tree plus one.
+
+For binary search tree, the rank of node equals to the order of node. (Q: [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) follow up)
+
 ### Binary tree
 
 * a tree data structure
