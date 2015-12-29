@@ -5,6 +5,11 @@ categories: [Algorithm]
 tags: [Algorithm]
 fullview: true
 ---
+## Time Complexity
+For loops, [Analysis of Algorithms](http://algs4.cs.princeton.edu/14analysis/)
+
+For iteration or divide and conquer, [Master theorem](https://en.wikipedia.org/wiki/Master_theorem)
+
 
 ## Dynamic Programming
 
