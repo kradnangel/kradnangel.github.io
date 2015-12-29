@@ -13,6 +13,7 @@ get(key) - Get the value (will always be positive) of the key if the key exists 
 set(key, value) - Set or insert the value if the key is not already present. When the cache reached its capacity, it should invalidate the least recently used item before inserting a new item.
   
 ### Solution
+
 #### 1. Hash tables & List
 The first idea is that use a hash table (dict in python) to recode the <key, value> and use a list to record the order of the keys. 
 
