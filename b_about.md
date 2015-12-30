@@ -10,3 +10,4 @@ permalink: /about/
 
 Welcome!
 
+My [resume](Resume_Zhou Qianren.pdf)
