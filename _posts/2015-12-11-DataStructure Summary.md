@@ -5,23 +5,6 @@ categories: [DataStructure]
 tags: [DataStructure]
 fullview: true
 ---
-AVL Tree / 平衡二叉树
-	- 查找、插入和删除在平均和最坏情况下都是O（log n）
-	- 增加和删除可能需要通过一次或多次树旋转来重新平衡这个树。
-
-
-
-
-寻找树形图中的最长路径
-Question:
-在一个迷宫中找距离最长的两个点。
- 
-迷宫可以看作是一个无根树，因此，这个问题等价与在一个树形图中找最远的两个节点，也叫做这个图的直径。迷宫、树形图有个很好的特点：即任意两个节点之间的距离就是这两点之间的最短路径和最长路径，也可以说任意两个节点之间的距离一定的。
-
-Algorithm:
-任选一点u为起点，对树进行BFS遍历，找出离u最远的点v。然后以v为起点，再进行BFS遍历，找出离v最远的点w。则v到w的路径长度即为树的直径。时间复杂度为O(n)。
-
-
 ## Tree
 
 ### Rank
@@ -33,6 +16,18 @@ For binary search tree, the rank of node equals to the order of node. (Q: [Kth S
 
 * a tree data structure
 * each node has at most two children
+
+#### Binary Search Tree(BST)
+
+#### ALV Tree(self-balancing binary search tree)
+
+* Search, insert, delete: O(log n) on average and worst case
+
+#### Segment tree
+
+* For storing intervals, or segments
+* its structure cannot be modified once it is built.
+
 
 
 ## Graph
@@ -60,7 +55,13 @@ Strongly connected: if it contains a directed path from x to y and a directed pa
 
 ### Graph traversal
 
+#### Path
 
+Longest path in undirected acycle graph:
+
+1. randomly pick up a node 'u' and BFS to find the farthermost node 'v' to 'u'. 
+2. From 'v', find its farthermost node 'w'.
+3. The longest path is the path from 'v' to 'w'
 
 
 ## Heaps
