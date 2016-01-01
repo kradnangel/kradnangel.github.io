@@ -42,27 +42,25 @@ The idea is to calculate the length of Longest consecutive sequence for each nod
 So, we do it layer by layer, from root to leaves. We use a hash map (dict in python) to record the length of Longest consecutive sequence for each node. or if we can modify the structure of TreeNode, we can add one more field to record the the length of Longest consecutive sequence for each node. 
            
 ### Code
-<pre class="prettyprint">
-class Solution(object):
-       def longestConsecutive(self, root):
-           """
-           :type root: TreeNode
-           :rtype: int
-           """
-           if not root: return 0
-           s = [root]
-           d = {root:1}
-           while s:
-               t = []
-               for p in s:
-                   if p.left: 
-                       t.append(p.left)
-                       d[p.left] = d[p] + 1 if p.left.val - p.val == 1 else 1
-                   if p.right: 
-                       t.append(p.right)
-                       d[p.right] = d[p] + 1 if p.right.val - p.val == 1 else 1
-               s = t
-
-           return max(d.values())
-</pre>            
+	class Solution(object):
+	       def longestConsecutive(self, root):
+	           """
+	           :type root: TreeNode
+	           :rtype: int
+	           """
+	           if not root: return 0
+	           s = [root]
+	           d = {root:1}
+	           while s:
+	               t = []
+	               for p in s:
+	                   if p.left: 
+	                       t.append(p.left)
+	                       d[p.left] = d[p] + 1 if p.left.val - p.val == 1 else 1
+	                   if p.right: 
+	                       t.append(p.right)
+	                       d[p.right] = d[p] + 1 if p.right.val - p.val == 1 else 1
+	               s = t
+	
+	           return max(d.values())       
  
