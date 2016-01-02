@@ -30,35 +30,4 @@ The input prerequisites is a graph represented by a list of edges, not adjacency
 The same idea with [Course Schedule](http://qianrenzhou.me/leetcode/2016/01/01/LeetCode_207_Course%20Schedule.html). Use directed graph to represent the relasionship among courses and use topological sorting to generate one valid order. 
            
 ### Code
-	from collections import defaultdict
-    class Solution(object):
-        def findOrder(self, numCourses, prerequisites):
-            """
-            :type numCourses: int
-            :type prerequisites: List[List[int]]
-            :rtype: bool
-            """
-            n = numCourses
-            cs = prerequisites
-            d = defaultdict(list)
-            ind = {}
-            connectedNodes = set([])
-            for s,f in cs:
-                d[f].append(s)
-                ind[s] = ind.get(s,0) + 1
-                connectedNodes.add(f)
-                connectedNodes.add(s)
-            zero, ans = [],list(set(range(0,n)) - connectedNodes)
-            m = len(connectedNodes)
-            for v in connectedNodes:
-                if not ind.get(v):
-                    zero.append(v)
-            while zero:
-                u = zero.pop()
-                ans.append(u)
-                m -= 1
-                for v in d[u]:
-                    ind[v] -= 1
-                    if ind[v] == 0:
-                        zero.append(v)
-            return ans if m == 0 else []
+{% gist 841161a2eded437ecce1 %}

@@ -19,7 +19,7 @@ GNU Wget is used to retrieves content from web servers.
 {% highlight Bash shell scripts %}
 
 	curl -O http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
-	
+{% endhighlight %}		
 #### 2. Extract and Enter
 {% highlight Bash shell scripts %}
 
