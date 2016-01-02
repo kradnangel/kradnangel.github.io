@@ -18,7 +18,7 @@ There are seveal aspects that you can change to customize a beautiful zsh for yo
 
 ####1. Install (via curl)
 
-{% highlighting Bash shell scripts %}
+{% highlight Bash shell scripts %}
 
 	sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 	

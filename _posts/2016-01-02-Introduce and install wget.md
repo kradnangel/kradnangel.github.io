@@ -16,21 +16,30 @@ GNU Wget is used to retrieves content from web servers.
 ###Install
 
 #### 1. Download
+{% highlight Bash shell scripts %}
+
 	curl -O http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
 	
 #### 2. Extract and Enter
+{% highlight Bash shell scripts %}
+
 	tar -zxvf wget-1.15.tar.gz
 	
 	cd wget-1.15/
+{% endhighlight %}		
 	
 #### 3. Configure
+{% highlight Bash shell scripts %}
+
 	./configure --with-ssl=openssl
-	
+{% endhighlight %}		
 #### 4. Install
+{% highlight Bash shell scripts %}
+
 	make
 
 	sudo make install		
-
+{% endhighlight %}	
 
 ###Reference
 1. [Install and Configure wget on OS X Yosemite 10.10 and fix SSL GNUTLS error](http://coolestguidesontheplanet.com/install-and-configure-wget-on-os-x/)
