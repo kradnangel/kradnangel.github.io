@@ -14,6 +14,7 @@ GNU Wget is used to retrieves content from web servers.
 * No SOCKS support
 
 ###Install
+
 #### 1. Download
 	curl -O http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
 	
