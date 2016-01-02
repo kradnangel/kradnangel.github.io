@@ -18,7 +18,7 @@ Inorder traversal.
 When meet the target node, mark and output next node.
            
 ### Code
-{% highlight R %}
+{% highlight Python %}
 
 	class Solution(object):
         def inorderSuccessor(self, root, p):
