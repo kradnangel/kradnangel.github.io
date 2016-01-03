@@ -5,7 +5,7 @@ categories: [Mac]
 tags: [Mac, zsh]
 fullview: true
 ---
-## Introduction
+### Introduction
 There are seveal aspects that you can change to customize a beautiful zsh for yourself.
 
 1. Oh My Zsh -> change theme
@@ -13,7 +13,7 @@ There are seveal aspects that you can change to customize a beautiful zsh for yo
 3. Preferences/Profiles/Window -> change transparency and window size
 
 
-## Change theme - Oh My Zsh
+### Change theme - Oh My Zsh
 "Oh My Zsh is an open source, community-driven framework for managing your zsh configuration."
 
 ####1. Install (via curl)
@@ -37,7 +37,7 @@ There are seveal aspects that you can change to customize a beautiful zsh for yo
 
 <br/>
 
-## Change color
+### Change color
 
 ####1. Download all the schemes
 iTerm -> Preferences -> Profiles -> Colors -> Load Presets -> [Visit Online Gallery](http://iterm2colorschemes.com/)
@@ -51,9 +51,9 @@ iTerm -> Preferences -> Profiles -> Colors -> Load Presets -> The scheme you lik
 
 <br/>
 
-## Change transparency and window size
+### Change transparency and window size
 iTerm -> Preferences -> Profiles -> Window
 
 
 
-## Find zsh [here](http://zsh.sourceforge.net/)
+### Find zsh [here](http://zsh.sourceforge.net/)

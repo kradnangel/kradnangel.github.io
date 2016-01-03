@@ -19,6 +19,7 @@ GNU Wget is used to retrieves content from web servers.
 {% highlight Bash shell scripts %}
 
 	curl -O http://ftp.gnu.org/gnu/wget/wget-1.15.tar.gz
+	
 {% endhighlight %}		
 #### 2. Extract and Enter
 {% highlight Bash shell scripts %}
@@ -26,12 +27,14 @@ GNU Wget is used to retrieves content from web servers.
 	tar -zxvf wget-1.15.tar.gz
 	
 	cd wget-1.15/
+	
 {% endhighlight %}		
 	
 #### 3. Configure
 {% highlight Bash shell scripts %}
 
 	./configure --with-ssl=openssl
+
 {% endhighlight %}		
 #### 4. Install
 {% highlight Bash shell scripts %}
@@ -39,6 +42,7 @@ GNU Wget is used to retrieves content from web servers.
 	make
 
 	sudo make install		
+
 {% endhighlight %}	
 
 ###Reference
