@@ -122,7 +122,19 @@ O(n^3)
 6. preprocessing: preprocess to get a initial solution first. It could be used as the threshold of optimization pruning. The common method to get a initial solution is greedy algorithm.
 
 
+##Tips
 
+###Bitwise operations
+
+#### Determine the parity
+
+	x & 1
+	
+#### Swap two numbers
+
+	a ^= b;  
+    b ^= a;  
+    a ^= b;  	
 
 
 
