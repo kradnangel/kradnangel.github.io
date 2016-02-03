@@ -34,6 +34,8 @@ prerequisites are edges. Based on these, construct a directed graph by using adj
 After constructing the graph, try to find the Topological sorting of this graph. If Topological sorting of this graph exists, return yes. Otherwise, return false.          
            
 ### Code
+
+```
 	from collections import defaultdict
     class Solution(object):
         def canFinish(self, numCourses, prerequisites):
@@ -65,4 +67,5 @@ After constructing the graph, try to find the Topological sorting of this graph.
                     if ind[v] == 0:
                         zero.append(v)
             return m == 0     
+ ```
  
