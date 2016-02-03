@@ -5,7 +5,7 @@ categories: [LeetCode]
 tags: [LeetCode, python, string, recursion]
 fullview: true
 ---
-###[Question](https://leetcode.com/problems/generalized-abbreviation/)
+### [Question](https://leetcode.com/problems/generalized-abbreviation/)
 Write a function to generate the generalized abbreviations of a word.
 
 Example:
@@ -32,29 +32,5 @@ e.g.:
 	'1' + '10s' = '11s'           
            
 ### Code
-	class Solution(object):
-        def generateAbbreviations(self, word):
-            """
-            :type word: str
-            :rtype: List[str]
-            """
-            def s(word):
-                if len(word) == 1:
-                    return ['1', word]
-                ans = []
-                i = word[0]
-                for abbs in s(word[1:]):
-                    ans.append(i+abbs)
-                    if (48<ord(abbs[0])<58):
-                        j = 1
-                        while (j < len(abbs)) and (48<=ord(abbs[j])<58):
-                            j += 1
-                        ans.append(str(int(abbs[:j])+1) + abbs[j:])
-                    else:
-                        ans.append('1'+abbs)
-                return ans
-            if word == '':
-                return [""]
-            else:
-                return s(word)  
- 
+
+{% gist d294a4efb08277e271d5 %}

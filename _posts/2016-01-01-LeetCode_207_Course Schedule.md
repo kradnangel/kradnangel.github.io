@@ -5,7 +5,7 @@ categories: [LeetCode]
 tags: [LeetCode, python, graph, Topological sorting]
 fullview: true
 ---
-###[Question](https://leetcode.com/problems/course-schedule/)
+### [Question](https://leetcode.com/problems/course-schedule/)
 There are a total of n courses you have to take, labeled from 0 to n - 1.
 
 Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: [0,1]
@@ -35,37 +35,5 @@ After constructing the graph, try to find the Topological sorting of this graph.
            
 ### Code
 
-```python
-	from collections import defaultdict
-    class Solution(object):
-        def canFinish(self, numCourses, prerequisites):
-            """
-            :type numCourses: int
-            :type prerequisites: List[List[int]]
-            :rtype: bool
-            """
-            n = numCourses
-            cs = prerequisites
-            d = defaultdict(list)
-            ind = {}
-            connectedNodes = set([])
-            for f,s in cs:
-                d[f].append(s)
-                ind[s] = ind.get(s,0) + 1
-                connectedNodes.add(f)
-                connectedNodes.add(s)
-            zero = []
-            m = len(connectedNodes)
-            for v in connectedNodes:
-                if not ind.get(v):
-                    zero.append(v)
-            while zero:
-                u = zero.pop()
-                m -= 1
-                for v in d[u]:
-                    ind[v] -= 1
-                    if ind[v] == 0:
-                        zero.append(v)
-            return m == 0     
- ```
+{% gist 6bb9ec5b821f264428b5 %}
  

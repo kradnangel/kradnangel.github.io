@@ -5,7 +5,7 @@ categories: [Mac]
 tags: [Mac, wget]
 fullview: true
 ---
-###Introduction
+### Introduction
 GNU Wget is used to retrieves content from web servers.
 
 * Command line only
@@ -13,7 +13,7 @@ GNU Wget is used to retrieves content from web servers.
 * Supports only GnuTLS or OpenSSL for SSL/TLS support
 * No SOCKS support
 
-###Install
+### Install
 
 #### 1. Download
 
@@ -36,7 +36,7 @@ GNU Wget is used to retrieves content from web servers.
 	sudo make install		
 
 
-###Reference
+### Reference
 1. [Install and Configure wget on OS X Yosemite 10.10 and fix SSL GNUTLS error](http://coolestguidesontheplanet.com/install-and-configure-wget-on-os-x/)
 
 2. [curl vs Wget](http://daniel.haxx.se/docs/curl-vs-wget.html)

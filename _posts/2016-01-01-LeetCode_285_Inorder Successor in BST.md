@@ -5,7 +5,7 @@ categories: [LeetCode]
 tags: [LeetCode, python, tree, traversal]
 fullview: true
 ---
-###[Question](https://leetcode.com/problems/inorder-successor-in-bst/)
+### [Question](https://leetcode.com/problems/inorder-successor-in-bst/)
 Given a binary search tree and a node in it, find the in-order successor of that node in the BST.
 
 Note: 
