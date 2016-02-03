@@ -35,7 +35,7 @@ After constructing the graph, try to find the Topological sorting of this graph.
            
 ### Code
 
-```
+```python
 	from collections import defaultdict
     class Solution(object):
         def canFinish(self, numCourses, prerequisites):

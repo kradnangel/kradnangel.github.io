@@ -1,11 +1,11 @@
 ---
 layout: post
-title: LeetCode_053_Maximum Subarray
+title: LeetCode_255 Verify Preorder Sequence in Binary Search Tree
 categories: [LeetCode]
 tags: [LeetCode, python, DP]
 fullview: true
 ---
-###[Question](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/)
+### [Question](https://leetcode.com/problems/verify-preorder-sequence-in-binary-search-tree/)
 Given an array of numbers, verify whether it is the correct preorder traversal sequence of a binary search tree.
 
 You may assume each number in the sequence is unique.

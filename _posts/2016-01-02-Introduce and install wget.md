@@ -31,13 +31,10 @@ GNU Wget is used to retrieves content from web servers.
 	
 #### 4. Install
 
-```
-
 	make
 
 	sudo make install		
 
-```
 
 ###Reference
 1. [Install and Configure wget on OS X Yosemite 10.10 and fix SSL GNUTLS error](http://coolestguidesontheplanet.com/install-and-configure-wget-on-os-x/)
