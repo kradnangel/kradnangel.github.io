@@ -18,26 +18,5 @@ Inorder traversal.
 When meet the target node, mark and output next node.
            
 ### Code
-{% highlight Python %}
 
-	class Solution(object):
-        def inorderSuccessor(self, root, p):
-            """
-            :type root: TreeNode
-            :type p: TreeNode
-            :rtype: TreeNode
-            """
-            stack = []
-            q = root
-            flag = False
-            while q or stack:
-                if q:
-                    stack.append(q)
-                    q = q.left
-                else:
-                    q = stack.pop()
-                    if flag: return q
-                    if q == p: flag = True
-                    q = q.right
-            return False
-{% endhighlight %}            
+{% gist d7acffed7f153d3a7199 %}               
