@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <style>
+/*        .counties {
+            fill: none;
+        }*/
+        /* Define the style of states in graph */
+        .states {
+          fill: none;
+          stroke: #fff;
+          stroke-linejoin: round;
+        }
+    </style>
+    <head>
+        <meta charset="utf-8">
+        <title>Cogs 220 Information Visualization Project -- Flights Visualization</title>
+        <script src="//d3js.org/d3.js"></script>
+        <script src="//d3js.org/queue.v1.min.js"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var dataset;
+
+            // d3.csv("example.csv", function(d) {
+            //   return {
+            //     date: new Date(+d.Year, +d.Month-1, +d.DayofMonth), // convert "Year" column to Date
+            //     DayOfWeek: +d.DayOfWeek, // convert "Length" column to number
+            //     // DepTime: +d.DepTime,
+            //     // CRSDepTime: +d.CRSDepTime,
+            //     // ArrTime: +d.ArrTime,
+            //     // CRSArrTime: +d.CRSArrTime,
+            //     // UniqueCarrier: +d.UniqueCarrier,
+            //     // FlightNum: +d.FlightNum,
+            //     // TailNum: +d.TailNum,
+            //     // ActualElapsedTime: +d.ActualElapsedTime,
+            //     // CRSElapsedTime: +d.CRSElapsedTime,
+            //     // AirTime: +d.AirTime,
+            //     // ArrDelay: +d.ArrDelay,
+            //     // DepDelay: +d.DepDelay,
+            //     // Origin: +d.Origin,
+            //     // Dest: +d.Dest,
+            //     // Distance: +d.Distance,
+            //     // TaxiIn: +d.TaxiIn,
+            //     // TaxiOut: +d.TaxiOut,
+            //     // Cancelled: +d.Cancelled,
+            //     // CancellationCode: +d.CancellationCode,
+            //     // Diverted: +d.Diverted,
+            //     // CarrierDelay: +d.CarrierDelay,
+            //     // WeatherDelay: +d.WeatherDelay,
+            //     // NASDelay: +d.NASDelay,
+            //     // SecurityDelay: +d.SecurityDelay,
+            //     // LateAircraftDelay: +d.LateAircraftDelay
+            //   };
+
+            // }, function(error, rows) {
+            //   dataset = rows
+            //   console.log(dataset);
+
+            // }); //End of csv
+
+            var width = 960,
+                height = 600;
+            var projection = d3.geo.albersUsa()
+                .scale(1280)
+                .translate([width / 2, height / 2]);
+
+            var path = d3.geo.path()
+                .projection(projection);
+
+            //Define the size of canvas
+            var svg = d3.select("body").append("svg")
+                .attr("width", width)
+                .attr("height", height);
+
+            queue()
+                //deferred asynchronous tasks
+                .defer(d3.json, "us.json")
+                //await callback
+                .await(ready);             
+            function ready(error, us) {
+                if (error) throw error;   
+                  svg.append("g")
+                      .attr("class", "counties")
+                    .selectAll("path")
+                      .data(topojson.feature(us, us.objects.counties).features)
+                    .enter().append("path")
+                    //   .attr("class", function(d) { return quantize(rateById.get(d.id)); })
+                      .attr("d", path);
+                svg.append("path")
+                    .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
+                    .attr("class", "states")
+                    .attr("d", path);
+            }
+            // var canvas = d3.select("body").append("canvas")
+            //     .attr("width", width)
+            //     .attr("height", height);
+
+            // var context = canvas.node().getContext("2d");
+
+            // var path = d3.geo.path()
+            //     .projection(projection)
+            //     .context(context);
+
+            // d3.json("us.json", function(error, us) {
+            //   if (error) throw error;
+
+            //   path(topojson.feature(us, us.objects.counties));
+            //   context.stroke();
+            // });
+        </script>
+    </body> 
+</html>
