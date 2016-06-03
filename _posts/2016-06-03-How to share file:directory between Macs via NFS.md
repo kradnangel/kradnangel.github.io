@@ -14,13 +14,13 @@ The first step is making the Mac2 as a NFS Server.
 1. sudo vim /etc/exports 
 2. Add the full path of the directory you want to share, one on its own line. 
 	
-	"\Users\Mac2\Sharing"
+	\Users\Mac2\Sharing
 	
    where we put our test file -- "LargeTestfile". (Here, you can add "-alldirs" if you want to share all the directories under this directory.) 
 	
 3. sudo nfsd enable 
    
-   it's better to disable it first if it was already enabled.)
+   it's better to disable it first if it was already enabled.
 
 
 Secondly, we need to mount the directory shared by Mac2 on Mac1.
@@ -37,7 +37,12 @@ Secondly, we need to mount the directory shared by Mac2 on Mac1.
 
 After those, we could asscess the file shared by Mac2 through the mounted directory "\Users\Mac1\FromSharing\"      
 
+
 ###Reference
+
 1. [How to Share Directories over NFS with Mac OS X](http://www.behanna.org/osx/nfs/howto1.html)
 
 2. [How to create an NFS share on MAC OS X (Snow Leopard) and mount (automatically during startup) from another MAC](https://community.spiceworks.com/how_to/61136-how-to-create-an-nfs-share-on-mac-os-x-snow-leopard-and-mount-automatically-during-startup-from-another-mac)
+
+3. [NFS Client Configuration](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/nfs-clientconfig.html#s2-nfs-fstab)
+
