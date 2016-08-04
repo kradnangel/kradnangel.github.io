@@ -6,7 +6,7 @@ tags: [Network, OS, NFS]
 fullview: true
 ---
 
-###Steps
+### Steps
 Let's say that we have Mac1 and Mac2. The Mac2 will be the NFS server and the Mac1 will be the client.
 
 The first step is making the Mac2 as a NFS Server.
@@ -38,7 +38,7 @@ Secondly, we need to mount the directory shared by Mac2 on Mac1.
 After those, we could asscess the file shared by Mac2 through the mounted directory "\Users\Mac1\FromSharing\"      
 
 
-###Reference
+### Reference
 
 1. [How to Share Directories over NFS with Mac OS X](http://www.behanna.org/osx/nfs/howto1.html)
 

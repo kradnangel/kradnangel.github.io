@@ -5,10 +5,10 @@ categories: [LeetCode]
 tags: [LeetCode, python, list]
 fullview: true
 ---
-###Question
+### Question
 There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
 
-###Solution
+### Solution
 This is a hard question, since we need solve it in O(log (m+n)). So, in every move, the size of question should be reduced by half.
 
 The key idea is to convert this question to the question of finding the 'k'th small number in the two arrays. Here, the k equals to (m+n)/2 if (n+m) is odd. If (n+m) is even, the k should be (m+n)/2 and (m+n)/2 + 1.
@@ -26,7 +26,7 @@ There are some boundary conditions we will use to stop function and output the r
 
 Enjor coding!
 
-###Code
+### Code
 	def findMed(n1,n2,k):
         if len(n1) < len(n2):
             return findMed(n2,n1,k)
