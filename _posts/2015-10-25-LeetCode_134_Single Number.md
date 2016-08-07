@@ -2,7 +2,7 @@
 layout: post
 title: LeetCode_134_Single Number
 categories: [LeetCode]
-tags: [LeetCode, python, Numerical, bit operation]
+tags: [LeetCode, python, Numerical, Bit Manipulation]
 fullview: true
 ---
 ###Question
