@@ -5,22 +5,19 @@ categories: [Algorithm]
 tags: [Algorithm, DP, 中文]
 fullview: true
 ---
-# 递推式 Recurrence formula 
+## 1. Recurrence formula （递推式）
 
-阶段 n 的最优解由阶段 n-1 推出。
+a[i] 表示阶段i，阶段i 的最优解由阶段 i-1 （及之前的阶段）推出。
 
-## Formula
+### Formula
 
-	a[n] = k \* a[n-1] + p \* x[n]
-	return a[n]
+	a[i] = k \* a[i-1] + p \* v[i]
 
-## Question and Answer
+or
 
-[139. Word Break](https://leetcode.com/problems/word-break/)
+	a[i] = optimal{a[0] ~ a[i-1]}
 
-a[i] represent whether the substring of s -- s[:i] can be segmented into a space-separated sequence of dictionary words or not. 
-
-a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
+### Question and Answer
 
 [276. Paint Fence](https://leetcode.com/problems/paint-fence/)
 
@@ -41,25 +38,31 @@ a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
 	a[n] = (k-1) \* (a[n-1] + a[n-2])
 
 
-# 多状态递推式 Multistate recurrence formula
 
-阶段 n 的最优解仍然由阶段 n-1 推出。但每个阶段将有多个状态。每个状态都由上一个阶段的某几个状态推出。
+[139. Word Break](https://leetcode.com/problems/word-break/)
 
-## Formula (for 3 states)
+a[i] represent whether the substring of s -- s[:i] can be segmented into a space-separated sequence of dictionary words or not. 
 
-	a[n][0] = max(a[n][1], a[n][2]) + x[n]
-	a[n][1] = max(a[n][0], a[n][2]) + x[n]
-	a[n][2] = max(a[n][0], a[n][1]) + x[n]
+	a[i] = a[j] and (s[j+1:i+1] in wordDict)
 
-## Question and Answer
+a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
 
-[256. Paint House](https://leetcode.com/problems/paint-house/)
 
-3状态问题。每个房子都有三种涂法。阶段 n 也有三种状态，分别为最后一个房子（房子 n）被涂成红色，被涂成蓝色，被涂成绿色。分别表示涂成对应颜色时，总成本的最小值。
+[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
-最后一个房子被涂成红色时的最小成本是，涂红成本加上阶段 n-1最后涂蓝／最后吐绿
+a[i] represent the least number of perfect square numbers needed for i.
 
-# 尾部固定式 Rear fixed
+Go through each square numbers j**2 (smaller than i) for each i (smaller than n).
+
+Find smallest a[i - j**2] for each a[i].
+
+
+	a[i] = min(a[i-j**2] + 1, a[i])
+
+code: {% gist: dccfa256661c8d1939b9530175a60209 %}
+
+
+## 1.5. Rear fixed type (尾部固定式, 递推变种)
 
 阶段 n 的最优解是(阶段 n-1 加当前值) 或者 (仅选择当前值)。
 
@@ -69,12 +72,12 @@ a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
 	
 	Case2              =
  
-## Formula
+### Formula
 	
 	a[n] = max(a[n-1] + x[n], x[n])
 	return max(a[n])
 
-## Question and Answer
+### Question and Answer
 
 [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
@@ -86,7 +89,27 @@ a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
 
 
 
+## 2. Multistate recurrence formula（多状态递推式）
 
+阶段 n 的最优解仍然由阶段 n-1 推出。但每个阶段将有多个状态。每个状态都由上一个阶段的某几个状态推出。
+
+### Formula (for 3 states)
+
+	a[n][0] = max(a[n][1], a[n][2]) + x[n]
+	a[n][1] = max(a[n][0], a[n][2]) + x[n]
+	a[n][2] = max(a[n][0], a[n][1]) + x[n]
+
+### Question and Answer
+
+[256. Paint House](https://leetcode.com/problems/paint-house/)
+
+3状态问题。每个房子都有三种涂法。阶段 n 也有三种状态，分别为最后一个房子（房子 n）被涂成红色，被涂成蓝色，被涂成绿色。分别表示涂成对应颜色时，总成本的最小值。
+
+最后一个房子被涂成红色时的最小成本是，涂红成本加上阶段 n-1最后涂蓝／最后吐绿
+
+
+
+### 3. Memorization search (记忆化搜索)
 
 
 
