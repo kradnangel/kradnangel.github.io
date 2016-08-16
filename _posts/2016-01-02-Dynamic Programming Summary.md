@@ -16,10 +16,12 @@ a[i] 表示阶段i，阶段i 的最优解由阶段 i-1 （及之前的阶段）�
 or
 
 	a[i] = optimal{a[0] ~ a[i-1]}
+	
+<br>	
 
 ### Question and Answer
 
-[276. Paint Fence](https://leetcode.com/problems/paint-fence/)
+#### [276. Paint Fence](https://leetcode.com/problems/paint-fence/)
 
 最多连续两个木桩是同色的。这时考虑最后两根木桩颜色的情况。
 
@@ -39,7 +41,7 @@ or
 
 
 
-[139. Word Break](https://leetcode.com/problems/word-break/)
+#### [139. Word Break](https://leetcode.com/problems/word-break/)
 
 a[i] represent whether the substring of s -- s[:i] can be segmented into a space-separated sequence of dictionary words or not. 
 
@@ -48,7 +50,7 @@ a[i] represent whether the substring of s -- s[:i] can be segmented into a space
 a[i] could be True when a[j] is True and s[j+1:i+1] is a dictionary word.
 
 
-[279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)
+#### [279. Perfect Squares](https://leetcode.com/problems/perfect-squares/)
 
 a[i] represent the least number of perfect square numbers needed for i.
 
@@ -59,8 +61,9 @@ Find smallest a[i - j**2] for each a[i].
 
 	a[i] = min(a[i-j**2] + 1, a[i])
 
-code: {% gist: dccfa256661c8d1939b9530175a60209 %}
+code: {% gist dccfa256661c8d1939b9530175a60209 %}
 
+<br>
 
 ## 1.5. Rear fixed type (尾部固定式, 递推变种)
 
@@ -79,7 +82,7 @@ code: {% gist: dccfa256661c8d1939b9530175a60209 %}
 
 ### Question and Answer
 
-[53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+#### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 求最大和子区间。
 
@@ -87,7 +90,7 @@ code: {% gist: dccfa256661c8d1939b9530175a60209 %}
 
 原理
 
-
+<br>
 
 ## 2. Multistate recurrence formula（多状态递推式）
 
@@ -101,16 +104,50 @@ code: {% gist: dccfa256661c8d1939b9530175a60209 %}
 
 ### Question and Answer
 
-[256. Paint House](https://leetcode.com/problems/paint-house/)
+#### [256. Paint House](https://leetcode.com/problems/paint-house/)
 
 3状态问题。每个房子都有三种涂法。阶段 n 也有三种状态，分别为最后一个房子（房子 n）被涂成红色，被涂成蓝色，被涂成绿色。分别表示涂成对应颜色时，总成本的最小值。
 
 最后一个房子被涂成红色时的最小成本是，涂红成本加上阶段 n-1最后涂蓝／最后吐绿
 
+#### [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+
+Need 3 States for this task -- buy/bought (s1), sell (s2) and cooldown/none (s3).
+
+The start state is at cooldown/none. Then, we can choose buy stock or do nothing. 
+	
+1. If we buy, we move to buy/bought state and pay for stock. 
+2. If we do nothing, we stay at cooldown/none.
+
+When we at buy/bought state, we have bought stock, so we can hold the stock to wait or sell it at this moment. 
+
+1. If we hold, we stay at buy/bought state. 
+2. If we sell, we move to sell state and get money.
+
+When we at sell state, we can only move to cooldown/none state.
+
+The end state is sell or cooldown/none state (It's no benefit to buy at last moment.)
+
+So, the formulas are:
+		
+		# record old state
+        t2 = s2
+        t1 = s1
+        t0 = s0
+        
+        # renew each state
+        s0 = max(t0, t2)
+        s1 = max(t1, t0 - prices[i])
+        s2 = t1 + prices[i]
+
+code: {% gist dd323796ea3d7f83b7bf1907620392f6 %}
+
+
+<br>
 
 
 ### 3. Memorization search (记忆化搜索)
 
 
 
-
+<br>
