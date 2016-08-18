@@ -65,7 +65,7 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 
 <br>
 
-## 1.5. Rear fixed type (尾部固定式, 递推变种)
+## 1.1. Rear fixed type (尾部固定式, 递推变种)
 
 阶段 n 的最优解是(阶段 n-1 加当前值) 或者 (仅选择当前值)。
 
@@ -89,6 +89,40 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 解法简述：当之前的和加上当前值小于当前值时，抛弃之前所有值选择当前值。否则，加上当前值然后继续。
 
 原理
+
+<br>
+
+
+## 1.2. Second-order recurrence formula(二阶递推式)
+
+a[i,j] represent 
+1. the best solution of (0,0) to (i,j) in Matrix
+2. or the best solution of 0~i in first string/list and 0~j in second string/list
+3. or the best solution of i~j
+
+
+### Formula
+
+	a[i][j] = optimal{a[i-1][j], a[i+1][j], a[i][j-1], a[i][j+1]}
+
+or
+	
+	a[i][j] = optimal{a[i-1][j], a[i][j-1]}
+	
+or
+
+	a[i][j] = optimal{a[i][k] + a[k][j]}
+
+### Question and Answer
+
+#### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+
+a[i][j] represent the maximum coins we can get. So we enumerate the burst point k between i and j. 
+
+	a[i][j] = max(a[i][j], a[i][k] + nums[i]*nums[k]*nums[j] + a[k][j])
+	
+code: {% gist f1bd27ed6bda63a27b739f9415fbdd70 %}
+
 
 <br>
 
@@ -128,6 +162,8 @@ When we at sell state, we can only move to cooldown/none state.
 
 The end state is sell or cooldown/none state (It's no benefit to buy at last moment.)
 
+![](/images/dp0.jpg)
+
 So, the formulas are:
 		
 		# record old state
@@ -151,3 +187,23 @@ code: {% gist dd323796ea3d7f83b7bf1907620392f6 %}
 
 
 <br>
+
+
+## Summary
+
+大部分的DP题目，只要返回一个值就好了。这样，用一个数组去记录每一个状态的最优值就好了。
+
+但有些DP需要最优解的所有组成情况，这时候可能就需要用递归(recursive)来帮助纪录所有组成情况了。
+
+思考以下题目：
+
+[140. Word Break II](https://leetcode.com/problems/create-maximum-number/)
+
+<br>
+
+DP是个很好的idea，但是遍历所有情况的时候是很耗时间的（使用for-loop），特别是如果遍历过程中会遇到很多无用解时。这时候，采取递归的记忆化搜索会快一些，当遇到无用解时，提前退出这次枚举（剪枝）。或者换一个思路思考这个问题（也可能仍是DP）。
+
+思考以下题目：
+
+[321. Create Maximum Number](https://leetcode.com/problems/create-maximum-number/)
+
