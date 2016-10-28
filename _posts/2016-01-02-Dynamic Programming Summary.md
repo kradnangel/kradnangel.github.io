@@ -21,6 +21,19 @@ or
 
 ### Question and Answer
 
+#### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+Simple solution O(n^2):
+
+a[i] represent the length of longest increasing subsequence in nums[:i].
+
+	a[i] = max(a[i], a[j] + 1)	# if nums[j] < nums[i]
+
+j is in front of i.
+
+[Better solution](https://discuss.leetcode.com/topic/28738/java-python-binary-search-o-nlogn-time-with-explanation) by using tail array (binary search) O(n log n)
+
+
 #### [276. Paint Fence](https://leetcode.com/problems/paint-fence/)
 
 最多连续两个木桩是同色的。这时考虑最后两根木桩颜色的情况。
@@ -78,6 +91,7 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 ### Formula
 	
 	a[n] = max(a[n-1] + x[n], x[n])
+	
 	return max(a[n])
 
 ### Question and Answer
@@ -117,7 +131,9 @@ or
 
 #### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
 
-a[i][j] represent the maximum coins we can get. So we enumerate the burst point k between i and j. 
+a[i][j] represent the maximum coins we can get.
+
+We enumerate the "last time" burst point k between i and j.
 
 	a[i][j] = max(a[i][j], a[i][k] + nums[i]*nums[k]*nums[j] + a[k][j])
 	
@@ -183,6 +199,13 @@ code: {% gist dd323796ea3d7f83b7bf1907620392f6 %}
 
 
 ### 3. Memorization search (记忆化搜索)
+
+
+### 4. Others
+
+#### [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
+
+Binary Search + DP
 
 
 
