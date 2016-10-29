@@ -117,16 +117,22 @@ a[i,j] represent
 
 ### Formula
 
+	# 4 direction, up, down, left, right
 	a[i][j] = optimal{a[i-1][j], a[i+1][j], a[i][j-1], a[i][j+1]}
+	
 
 or
 	
+	# usually, compare 2 strings or 2 lists
 	a[i][j] = optimal{a[i-1][j], a[i][j-1]}
 	
 or
 
+	# need to enumerate the divide-point k
+	# so, the time complexity generally is O(n^3)
 	a[i][j] = optimal{a[i][k] + a[k][j]}
-
+	
+	
 ### Question and Answer
 
 #### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
@@ -200,6 +206,15 @@ code: {% gist dd323796ea3d7f83b7bf1907620392f6 %}
 
 ### 3. Memorization search (记忆化搜索)
 
+#### [403. Frog Jump](https://leetcode.com/problems/frog-jump/)
+
+DFS + Memorization, save the result of the state we have visited.
+
+For this question, if the frog uses step size 'k' to jump to current stone "s", but it can not reach the last stone. We will add (k, s) to 'not work' set. So, if next time, we revisit this stone by this step size, we will return 'False' directly instead of keeping trying.
+
+code: {% gist ce51ff0e216edf0da0e7d57b254ff0da %}
+
+<br>
 
 ### 4. Others
 
