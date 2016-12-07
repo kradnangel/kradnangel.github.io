@@ -5,7 +5,10 @@ categories: [Algorithm]
 tags: [Algorithm, DP, 中文]
 fullview: true
 ---
-## 1. Recurrence formula （递推式）
+## 1. Recurrence formula 
+（递推式）
+
+<br>
 
 a[i] 表示阶段i，阶段i 的最优解由阶段 i-1 （及之前的阶段）推出。
 
@@ -19,7 +22,7 @@ or
 	
 <br>	
 
-### Question and Answer
+### Examples
 
 #### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
@@ -78,7 +81,11 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 
 <br>
 
-## 1.1. Rear fixed type (尾部固定式, 递推变种)
+## 1.1. Rear fixed type 
+
+(尾部固定式, 递推变种)
+
+<br>
 
 阶段 n 的最优解是(阶段 n-1 加当前值) 或者 (仅选择当前值)。
 
@@ -94,7 +101,7 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 	
 	return max(a[n])
 
-### Question and Answer
+### Examples
 
 #### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
@@ -104,10 +111,18 @@ code: {% gist dccfa256661c8d1939b9530175a60209 %}
 
 原理
 
+#### [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+
+
+
 <br>
 
 
-## 1.2. Second-order recurrence formula(二阶递推式)
+## 1.2. Second-order recurrence formula
+
+(二阶递推式)
+
+<br>
 
 a[i,j] represent 
 1. the best solution of (0,0) to (i,j) in Matrix
@@ -117,29 +132,54 @@ a[i,j] represent
 
 ### Formula
 
+#### Type 1
+
 	# 4 direction, up, down, left, right
 	a[i][j] = optimal{a[i-1][j], a[i+1][j], a[i][j-1], a[i][j+1]}
 	
-
-or
+#### Type 2
 	
 	# usually, compare 2 strings or 2 lists
 	a[i][j] = optimal{a[i-1][j], a[i][j-1]}
 	
-or
+#### Type 3
 
 	# need to enumerate the divide-point k
 	# so, the time complexity generally is O(n^3)
 	a[i][j] = optimal{a[i][k] + a[k][j]}
 	
 	
-### Question and Answer
+### Examples
+
+#### Insert operations
+
+Given a list of integers, you are asked to insert '(', ')', '+', '*' between the integers to get a maximum calculation result.
+
+input1: [1,2,3,4]
+
+return: 36
+
+The best way to insert operations is (1+2)\*3\*4
+
+input1: [-4,3,9]
+
+return 23
+
+The best way to insert operations is -4+3\*9
+
+<br>
+
+Solution is a[i][j] means the maximum caclulation result among input[i:j].
+
+	a[i][j] = max(a[i][j], a[i][k] + a[k+1][j], a[i][k] * a[k+1][j])
+	
+code: {% gist 8b5712817428f77cd27f0efe3935d288 %}
 
 #### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
 
-a[i][j] represent the maximum coins we can get.
+a[i][j] represent the maximum coins we can get. (Type 3)
 
-We enumerate the "last time" burst point k between i and j.
+We enumerate the "last time" burst point k between i and j. (Of course, enumerate the step size and start point i as the first two loop)
 
 	a[i][j] = max(a[i][j], a[i][k] + nums[i]*nums[k]*nums[j] + a[k][j])
 	
@@ -148,7 +188,13 @@ code: {% gist f1bd27ed6bda63a27b739f9415fbdd70 %}
 
 <br>
 
-## 2. Multistate recurrence formula（多状态递推式）
+---
+
+## 2. Multistate recurrence formula
+
+（多状态递推式）
+
+<br>
 
 阶段 n 的最优解仍然由阶段 n-1 推出。但每个阶段将有多个状态。每个状态都由上一个阶段的某几个状态推出。
 
@@ -158,7 +204,7 @@ code: {% gist f1bd27ed6bda63a27b739f9415fbdd70 %}
 	a[n][1] = max(a[n][0], a[n][2]) + x[n]
 	a[n][2] = max(a[n][0], a[n][1]) + x[n]
 
-### Question and Answer
+### Examples
 
 #### [256. Paint House](https://leetcode.com/problems/paint-house/)
 
@@ -203,8 +249,13 @@ code: {% gist dd323796ea3d7f83b7bf1907620392f6 %}
 
 <br>
 
+---
 
-### 3. Memorization search (记忆化搜索)
+### 3. Memorization search
+
+ (记忆化搜索)
+
+<br>
 
 #### [403. Frog Jump](https://leetcode.com/problems/frog-jump/)
 
@@ -216,6 +267,8 @@ code: {% gist ce51ff0e216edf0da0e7d57b254ff0da %}
 
 <br>
 
+---
+
 ### 4. Others
 
 #### [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/)
@@ -226,6 +279,7 @@ Binary Search + DP
 
 <br>
 
+---
 
 ## Summary
 

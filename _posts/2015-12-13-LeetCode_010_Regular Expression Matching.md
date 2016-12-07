@@ -98,4 +98,12 @@ Ps. Think out the solution by thinking from the end. (Start to think the cases f
             return a[n][m]
 
 
+### Another idea
+
+![](/images/regular_expression.jpg)
+
+### Code
+
+{% gist 29109af41e03e7f8bb9fb9a9157fd2f5 %}
+
 		
