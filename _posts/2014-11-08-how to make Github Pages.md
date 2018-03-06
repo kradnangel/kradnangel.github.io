@@ -8,19 +8,19 @@ fullview: true
 
 
 
-####Install Ruby
+#### Install Ruby
 Generally speaking, the Mac OS will have installed Ruby by default.
 To check, open Terminal and run command 'ruby --version'
 	
   <br />	
   
-####Install Bundler
+#### Install Bundler
 
 	$ gem install bundler
 	
   <br />	
   
-####Install Jekyll
+#### Install Jekyll
 Create a file in repository called **'Gemfile'** and add *gem 'github-pages'*.
 
 Before run the next line, check whether you have installed **'xcode-select'** or not.
@@ -36,13 +36,17 @@ Run
 	
   <br />	
   
-####Run Jekyll
+#### Run Jekyll
 Run 'bundle exec jekyll serve' in Terminal
-Now, you can try to open http://localhost:4000/index.html to see your Github page.
+Now, you can try to open 
+
+	http://localhost:4000/index.html 
+	
+to see your Github page.
 	
   <br />	
   
-####Choose Theme
+#### Choose Theme
 See here:
 
 **[Jekyll Theme](http://jekyllthemes.org/)**
@@ -52,7 +56,7 @@ Fork the theme you like, unzip it and copy them to your repository folder.
 	
   <br />	
   
-####Ref:
+#### Ref:
 1. [一步步在GitHub上创建博客主页](http://www.pchou.info/web-build/2014/07/04/build-github-blog-page-08.html)
 
 2. [Using Jekyll with Pages](
