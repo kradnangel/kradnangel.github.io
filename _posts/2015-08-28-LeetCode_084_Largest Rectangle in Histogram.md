@@ -5,7 +5,7 @@ categories: [LeetCode]
 tags: [LeetCode, python, list]
 fullview: true
 ---
-###Question
+### Question
 Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
 
 
@@ -20,9 +20,16 @@ Given height = [2,1,5,6,2,3],
 
 return 10.
 
-###Solution
-The easiest method we can come up with is enumerating every combinations. However, it is too slow.
+### Solution
 
+#### Enumerating O(n^2)
+The simplest method we can come up with is enumerating every combinations. We enumerate the left bar L, and find the minimum height in range [L, rightMost]. 
+
+	size = minimum height * current range
+	
+Time complexity: O(n^2)
+
+#### O(n logn)
 A improved method is that we can enumerate every int in the list. Assume that int is in the max size rectangle. So, we need to find the maximum size rectangle which include this int. So, what we do is try to find the first int "l" which is smaller that this int in its left. We do same thing to find the first smaller int in its right "r". Then the maximum size rectangle with this int is the height of this int * the range it can cover (r - l - 1).
 
 If we just scan to find the smaller height, it will be too slow. Thereform, before we try to enumerate every height, we scan the height list from left to right to find left first smaller height of every height. Besides, we scan the height list from right to left to find right first smaller height of every height. 
@@ -33,53 +40,19 @@ Take left as the example, when we try to find the left smaller height of current
 
 Since there is no height in the left of the first height, we insert "0" in the position "0". Similarly, we add "0" to the end of the height list.
 
-A better [algorithm](http://www.2cto.com/kf/201502/375392.html) using stack (in Chinese).
+#### Stack O(n)
+For each bar, we need to know the position of first element in the left/right is smaller than this bar. we can use a stack. 
 
-###Code
-	class Solution(object):
-    def largestRectangleArea(self, height):
-        """
-        :type height: List[int]
-        :rtype: int
-        """
-        maxSize = 0
-        height.insert(0,-1)
-        n = len(height)
-        leftMin = [0]
-        for i in range(1, n):
-            if height[i - 1] < height[i]:
-                leftMin.append(i - 1)
-            else:
-                j = leftMin[i - 1]
-                while height[j] >= height[i]:
-                    j = leftMin[j]
-                leftMin.append(j)
-        leftMin.append(7)
+If stack is empty or the height of current bar  is larger than the top element in stac ), push it to stack. If the height of current bar is smaller than the top lement in the stack, (the index of current bar is the position of first element that smaller than the top element in the stack) pop up stack top element until currentHeight > stack top element or stack is empty. In the meantime, for each element poped up, caculate the size based on taking stack top element as the minHeight. The position of frist element in the left of this top element in the stack is the rightmost position of the element under this top element. So, we need a extre array or dictionary to record the rightmost position of each element in the stack. 
 
-        height.append(-1)
-        n = len(height)
-        rightMin = [n-1]
-        for i in range(n - 2, 0, -1):
-            if height[i + 1] < height[i]:
-                rightMin.append(i + 1)
-            else:
-                j = rightMin[n - (i+2)]
-                while height[j] >= height[i]:
-                    j = rightMin[n - (j+1)]
-                rightMin.append(j)    
-        rightMin.append(0)          
-        rightMin.reverse()
-        for i in range(1, n-1):
-            l = i - 1
-            r = i + 1
-            while (l >= 0):
-                if (height[l] >= height[i]): l = leftMin[l]
-            	else: break
-            while (r < n):
-                if (height[r] >= height[i]): r = rightMin[r]
-            	else: break
-            size = (r - l - 1) * height[i]
-            if size > maxSize:
-                maxSize = size
+After scanning all bars in the given array, pop up all elements in the stack and calculate the size. 
 
-        return maxSize
+return the max one. 
+
+[ref](http://www.2cto.com/kf/201502/375392.html)
+
+### Code
+
+{% 622fd158a3dd252b1ed178320baed6d1 %}
+        
+{% gist 6f9a90c743f2800e783feb73c92dbbbb %}
