@@ -55,6 +55,4 @@ return the max one.
 
 ### Code
 
-{% 622fd158a3dd252b1ed178320baed6d1 %}
-        
-{% gist 6f9a90c743f2800e783feb73c92dbbbb %}
+{% gist 622fd158a3dd252b1ed178320baed6d1 %}

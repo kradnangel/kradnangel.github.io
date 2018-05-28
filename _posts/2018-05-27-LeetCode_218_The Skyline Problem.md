@@ -29,5 +29,5 @@ trick:
 2. -height in heap to make it max heap (python)
 
 ### Code
-{% gist 382588755a79b417537bdff10bb9bae7 %}          
 
+{% gist 382588755a79b417537bdff10bb9bae7 %}
