@@ -49,7 +49,9 @@ After scanning all bars in the given array, pop up all elements in the stack and
 
 return the max one. 
 
-[ref](http://www.2cto.com/kf/201502/375392.html)
+[ref in EN](https://www.geeksforgeeks.org/largest-rectangular-area-in-a-histogram-set-1/)
+
+[ref in CH](http://www.2cto.com/kf/201502/375392.html)
 
 ### Code
 
